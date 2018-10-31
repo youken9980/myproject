@@ -33,4 +33,4 @@ Thumbs.db
 
 # customer ignore
 pom.xml.versionsBackup
-framework/src/test/java/myproject/util/BackupManagerTest.java
+yk-core/src/test/java/yk/core/util/BackupManagerTest.java
