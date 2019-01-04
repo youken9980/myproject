@@ -16,7 +16,7 @@ docker run -it -d -p 8761:8761 \
   -e hostName="eureka-node1" \
   -e serverPort="8761" \
   --network mynet --name eureka-node1 \
-  local/demo-eureka --spring.profiles.active=single
+  local/eureka-service --spring.profiles.active=single
 docker logs -f eureka-node1
 ```
 
@@ -29,19 +29,19 @@ docker run -it -d --expose 8761 \
   -e serverPort="8761" \
   -e eurekaServerUrl="http://eureka-node1:8761/eureka/,http://eureka-node2:8761/eureka/" \
   --network mynet --name eureka-node3 \
-  local/demo-eureka --spring.profiles.active=multiple
+  local/eureka-service --spring.profiles.active=multiple
 docker run -it -d --expose 8761 \
   -e hostName="eureka-node2" \
   -e serverPort="8761" \
   -e eurekaServerUrl="http://eureka-node1:8761/eureka/,http://eureka-node3:8761/eureka/" \
   --network mynet --name eureka-node2 \
-  local/demo-eureka --spring.profiles.active=multiple
+  local/eureka-service --spring.profiles.active=multiple
 docker run -it -d -p 8761:8761 \
   -e hostName="eureka-node1" \
   -e serverPort="8761" \
   -e eurekaServerUrl="http://eureka-node2:8761/eureka/,http://eureka-node3:8761/eureka/" \
   --network mynet --name eureka-node1 \
-  local/demo-eureka --spring.profiles.active=multiple
+  local/eureka-service --spring.profiles.active=multiple
 
 docker logs -f eureka-node1
 ```

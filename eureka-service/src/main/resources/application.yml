@@ -1,7 +1,7 @@
 spring:
   profiles: single
   application:
-    name: demo-eureka
+    name: eureka-service
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
@@ -27,7 +27,7 @@ eureka:
 spring:
   profiles: multiple
   application:
-    name: demo-eureka
+    name: eureka-service
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
