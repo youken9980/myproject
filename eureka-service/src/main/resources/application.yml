@@ -14,7 +14,7 @@ eureka:
     appname: ${spring.application.name}
     hostname: ${hostName}
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -40,7 +40,7 @@ eureka:
     appname: ${spring.application.name}
     hostname: ${hostName}
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     serviceUrl:
       defaultZone: ${eurekaServerUrl}
