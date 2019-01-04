@@ -1,6 +1,6 @@
 ### maven build
 ```
-mvn clean package dockerfile:build -Dmaven.test.skip=true -U
+mvn clean package dockerfile:build -Dmaven.test.skip=true
 ```
 
 ### create network
