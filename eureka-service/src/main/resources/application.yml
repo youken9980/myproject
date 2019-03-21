@@ -8,11 +8,11 @@ spring:
     locale: zh_CN
     time-zone: GMT+8
 server:
-  port: ${serverPort}
+  port: 8761
 eureka:
   instance:
     appname: ${spring.application.name}
-    hostname: ${hostName}
+    hostname: localhost
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     prefer-ip-address: false
   client:
@@ -21,11 +21,11 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
     eviction-interval-timer-in-ms: 5000
 ---
 spring:
-  profiles: multiple
+  profiles: cluster
   application:
     name: eureka-service
   jackson:
@@ -45,5 +45,5 @@ eureka:
     serviceUrl:
       defaultZone: ${eurekaServerUrl}
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
     eviction-interval-timer-in-ms: 5000
