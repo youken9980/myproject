@@ -1,3 +1,8 @@
+# gradle ignore
+.gradle/
+**/build/
+**/out/
+
 # maven ignore
 target/
 *.jar
