@@ -36,13 +36,18 @@ public class BackupManager {
     }
 
     public void backup(String[] args) {
-        if (args.length < 1) {
+        if (args.length < 2) {
             System.exit(0);
         }
         long lBegin = System.currentTimeMillis();
         try {
-            for (int i = 2; i < args.length; i++) {
-                sync(concat(args[0], args[i]), concat(args[1], args[i]));
+            int argLength = args.length;
+            if (argLength > 2) {
+                for (int i = 2; i < argLength; i++) {
+                    sync(concat(args[0], args[i]), concat(args[1], args[i]));
+                }
+            } else {
+                sync(args[0], args[1]);
             }
         } finally {
             long lEnd = System.currentTimeMillis();
