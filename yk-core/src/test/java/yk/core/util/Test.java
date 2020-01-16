@@ -7,13 +7,10 @@ package yk.core.util;
 public class Test {
 
 	public static void main(String[] args) throws Exception {
-		long beginTms = System.currentTimeMillis(), endTms;
-		Thread.sleep(100);
-		endTms = System.currentTimeMillis();
-		System.out.println(endTms - beginTms);
-		beginTms = endTms;
-		Thread.sleep(100);
-		endTms = System.currentTimeMillis();
-		System.out.println(endTms - beginTms);
+		long beginTime, endTime = System.currentTimeMillis();
+
+		beginTime = endTime;
+		endTime = System.currentTimeMillis();
+		System.out.println(String.format("total cost : %sms", endTime - beginTime));
 	}
 }

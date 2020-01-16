@@ -4,10 +4,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author 杨剑
@@ -53,7 +50,7 @@ public class BackupManager {
             long lEnd = System.currentTimeMillis();
             double dCostSs = (lEnd - lBegin) / 1000.0;
             double dCostMm = dCostSs / 60.0;
-            System.out.println(String.format("Cost: %1$.2fmm, %2$.2fss.", dCostMm, dCostSs));
+            System.out.println(String.format("Cost: %1$.2fm, %2$.2fs.", dCostMm, dCostSs));
         }
     }
 
