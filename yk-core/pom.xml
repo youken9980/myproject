@@ -14,7 +14,7 @@
 		<java-compiler.version>1.8</java-compiler.version>
 		<!-- version begin -->
 		<logback.version>1.2.3</logback.version>
-		<httpcomponents.version>4.5.6</httpcomponents.version>
+		<httpcomponents.version>4.5.13</httpcomponents.version>
 		<jackson.version>2.9.10</jackson.version>
 		<!-- version end -->
 	</properties>
